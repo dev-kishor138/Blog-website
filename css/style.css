@@ -69,13 +69,22 @@ p {
     color: var(--gry-2);
 }
 
+.content-header {
+    text-align: center;
+}
+
+.content-heading {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
 
 /* navigation design  */
 .nav {
     background: var(--wh);
     padding: 0 2rem;
     height: 0rem;
-    min-height: 8vh;
+    min-height: 10vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
 }
@@ -189,7 +198,8 @@ main .blog {
 }
 
 main .blog .blog-post {
-    padding-top: 6rem;
+    padding-top: 3rem;
+    margin-bottom: 100px;
 }
 
 main .blog .blog-post .blog-content {
@@ -232,6 +242,49 @@ main .blog .container .owl-nav {
     color: var(--gry-1);
     background: transparent;
     font-size: 2rem;
+}
+
+
+/* Job Design */
+main .job-container {
+    margin: 150px 0;
+}
+
+main .job-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+main .job-content .job-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+main .job-container .job-card .logo {
+    position: relative;
+    height: 80px;
+    margin: 20px;
+}
+
+main .job-container .job-card .logo img {
+    height: 100%;
+    object-fit: contain;
+}
+
+main .job-container .job-card .job-title {
+    margin: 0;
+}
+
+main .job-container .job-card .job-lot {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+main .job-container .job-card .job-btn {
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 
@@ -330,7 +383,7 @@ main .site-content .sidebar .popular-post h2 {
 
 main .site-content .sidebar .popular-post>.post-content {
     padding: 1rem 0;
-    background-color: #F0F0F0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 main .site-content .sidebar .popular-post>.post-content .post-info {
@@ -464,6 +517,35 @@ footer.footer .move-up span:hover {
 
 
 /* Responsive Design  */
+/* Large Device */
+@media only screen and (max-width: 1130px) {
+    .site-content .post-content>.post-image .post-info {
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .site-content .sidebar .popular-post .post-info {
+        display: none !important;
+    }
+
+    footer.footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav .nav-menu .nav-item .nav-link:hover {
+        background: var(--bg);
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    main .job-content {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+
 /* medium Device   */
 @media (max-width: 750px) {
 
@@ -474,5 +556,42 @@ footer.footer .move-up span:hover {
 
     .nav .toggle-collapse {
         display: initial;
+    }
+
+    main .job-content {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    main .site-content {
+        grid-template-columns: 100%;
+    }
+
+    footer.footer .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* small device  */
+@media only screen and (max-width: 520px) {
+    main .blog {
+        height: 125vh;
+    }
+
+    .site-content .post-content>.post-image .post-info {
+        display: none;
+    }
+
+    footer.footer .container>div {
+        padding: 1rem .9rem !important;
+    }
+
+    footer .rights {
+        padding: 0 1.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse {
+        width: 80%;
     }
 }

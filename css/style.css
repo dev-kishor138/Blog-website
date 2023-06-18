@@ -1,0 +1,168 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    /* color theme  */
+    --gry-1: #3f4954;
+    --gry-2: #686666da;
+    --bc: #0f0f0f;
+    --wh: #fff;
+    --bg: #104f55;
+
+    /* gradient color Theme  */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+/* global class  */
+* {
+    font-family: "Lato", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gry-1);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background: var(--sky);
+}
+
+span {
+    font-family: var(--Abel);
+}
+
+.container {
+    margin: 5vw;
+}
+
+.text-gray {
+    color: var(--tg);
+}
+
+p {
+    font-family: var(--Livvic);
+    color: var(--tl);
+}
+
+
+/* navigation design  */
+.nav {
+    background: var(--wh);
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 8vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .nav-menu .nav-brand a {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0%;
+    Width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem;
+}
+
+nav .toggle-collapse .toggle-icons i {
+    font-size: 1.5rem;
+    color: var(--gry-1);
+}
+
+.collapse {
+    height: 30rem;
+}
+
+.nav .nav-menu .nav-item {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-menu .nav-item .nav-link {
+    padding: 1.6rem 1rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.nav .nav-menu .nav-item .nav-link a {
+    padding: 10px 20px;
+}
+
+.nav .nav-menu .nav-item .nav-link:hover a {
+    color: var(--wh);
+    background: var(--bg);
+}
+
+nav .social {
+    padding: 1.4rem 0;
+}
+
+.nav .nav-menu .social i {
+    padding: 0.2rem
+}
+
+.nav .nav-menu .social i:hover {
+    color: #a1c4cf;
+}
+
+
+
+
+
+
+
+
+/* Responsive Design  */
+/* medium Device   */
+@media (max-width: 750px) {
+
+    .nav .nav-menu,
+    .nav .nav-menu .nav-item {
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse {
+        display: initial;
+    }
+}

@@ -147,6 +147,37 @@ nav .social {
 }
 
 
+/* title area design */
+main .site-title {
+    background: url(../img/c62246425d2c45d07ff2ad24ecd620cc.jpg) no-repeat;
+    min-height: 110vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background {
+    padding-top: 15rem;
+    color: var(--wh);
+    text-align: center;
+}
+
+main .site-title .site-background h1,
+h3 {
+    margin: .3rem;
+}
+
+main .site-title .site-background .btn {
+    margin: 1.8rem;
+    background: var(--sky);
+}
+
+main .site-title .site-background .btn:hover {
+    background: transparent;
+    border: 1px solid var(--wh);
+    color: var(--wh);
+}
+
 
 
 
